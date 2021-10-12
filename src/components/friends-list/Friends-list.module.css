@@ -1,0 +1,36 @@
+.list {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  border: 1px solid #d3dce8;
+  border-radius: 5px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.isOnline {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: green;
+  margin-left: 10px;
+}
+.isOffline {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: red;
+  margin-left: 10px;
+}
+.avatar {
+  margin-left: 10px;
+}
+.name {
+  margin-left: 20px;
+}

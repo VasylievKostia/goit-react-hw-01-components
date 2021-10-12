@@ -1,29 +1,20 @@
-import { Children } from "react"
-
-
-export function Statistics( props) {
-    console.log(props)
-    return <section className="statistics">
-        <h2 classNameName="title">Upload stats</h2>
+import s from './Statistics.module.css'
+export function Statistics(p) {
+    return <section className={s.statistics}>
+      <h2 className={s.title}>{ p.title && 'Upload stats'}</h2>
         
 
-  <ul className="stat-list">
-    <li className="item">
-      <span className="label"></span>
-      <span className="percentage"></span>
-    </li>
-    <li className="item">
-      <span className="label"></span>
-      <span className="percentage"></span>
-    </li>
-    <li className="item">
-      <span className="label"></span>
-      <span className="percentage"></span>
-    </li>
-    <li className="item">
-      <span className="label"></span>
-      <span className="percentage"></span>
-    </li>
-  </ul>
+  <ul className={s.statList}>
+        {p.stats.map(el => {
+          return (
+            <li key={el.id} className={s.statItem} style={{
+                        backgroundColor: `rgb(${105 + 150 * Math.random()}, ${105 + 150 * Math.random()}, ${105 + 150 * Math.random()})`,
+                    }}>
+              <span className="label">{el.label} </span>
+              <span className="percentage">{el.percentage}%</span>
+            </li>
+          );
+        })}
+      </ul>
 </section>
 }
